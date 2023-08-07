@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DriftNews.Models
+namespace DriftNewsParser.Models
 {
     public class Race
     {
@@ -12,5 +13,7 @@ namespace DriftNews.Models
         public string Country { get; set; }
         [Required]
         public string City { get; set; }
+        [Required]
+        public string Championship { get; set; }
     }
 }

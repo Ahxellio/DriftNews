@@ -1,8 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DriftNews.Models
+namespace DriftNewsParser.Models
 {
-    public class News
+    public class NewsRDS
     {
         [Key]
         public int Id { get; set; }
@@ -16,6 +21,8 @@ namespace DriftNews.Models
         public string Date { get; set; }
         [Required]
         public string ImgUrl { get; set; }
+        [Required]
+        public string Championship { get; set; }
 
     }
 }
