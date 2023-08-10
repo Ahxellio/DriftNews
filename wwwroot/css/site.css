@@ -1,12 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:sans-serif;
-    list-style:none;
-    text-decoration:none;
 
-}
 html {
   font-size: 14px;
 }
@@ -16,14 +8,20 @@ html {
     font-size: 16px;
   }
 }
-
+.offset-lg-3{
+    margin-left:0%;
+}
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 .navbar{
     width:100%;
@@ -96,21 +94,49 @@ header{
     transition:all .20s ease-in-out;
     opacity:1;
 }
-/*header .logo{
-    font-size:20px;
+.head{
+    min-height:700px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
-header nav ul li{
-    position:relative;
-    float:left;
+.row{
+    min-height:400px;
+    display:flex;
+    align-items:center;
 }
-header nav ul li a{
-    padding: 15px;
-    color:#000;
-    font-size:16px;
-    display:block;
+.head-content{
+    text-align:center;
+
 }
-header nav ul li a:hover {
-    background: #000;
-    color: #fff
+.main-block {
+    background: url(https://drift.news/wp-content/uploads/2023/08/MG_9628.jpg);
+    align-items: center;
+    text-align: center;
+    vertical-align: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
-*/
+.main-block .main-text{
+    align-items: center;
+    text-align: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-row-gap: 10px;
+}
+.second-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap:20px;
+    grid-row-gap:10px;
+}
