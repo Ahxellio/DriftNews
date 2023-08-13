@@ -123,6 +123,148 @@ header{
     align-items: flex-end;
     justify-content: center;
 }
+.main-block .main-text .btn-main{ 
+    display :inline-block;
+    padding:35px 10px 35px 10px;
+    font-size:18px;
+    border:none;
+    background-color:#fff;
+    color:#000000;
+    font-size:22px;
+    font-weight:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+.fleft-block {
+    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: bottom;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content:center;
+    flex-direction:column-reverse;
+    flex-wrap:nowrap;
+}
+.fleft-block .text h4{
+    color:#000000;
+}
+.fleft-block .btn-main{
+    display :inline-block;
+    padding:35px 10px 35px 10px;
+    font-size:18px;
+    border:none;
+    background-color:#fff;
+    color:#000000;
+    font-size:22px;
+    font-weight:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+.fright-block {
+    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: bottom;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+}
+.fright-block .btn-main {
+    display: inline-block;
+    padding: 35px 10px 35px 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.fright-block .fr-text {
+    display: inline-block;
+    padding: 35px 10px 35px 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.sleft-block {
+    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: bottom;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content:center;
+    flex-direction:column-reverse;
+    flex-wrap:nowrap;
+}
+.sleft-block .text h4{
+    color:#000000;
+}
+.sleft-block .btn-main{
+    display :inline-block;
+    padding:35px 10px 35px 10px;
+    font-size:18px;
+    border:none;
+    background-color:#fff;
+    color:#000000;
+    font-size:22px;
+    font-weight:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+
+}
+.sright-block {
+    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: bottom;
+    height: 500px;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+}
+.sright-block .btn-main {
+    display: inline-block;
+    padding: 35px 10px 35px 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.sright-block .sr-text {
+    display: inline-block;
+    padding: 35px 10px 35px 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #fff;
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
 .main-block .main-text{
     align-items: center;
     text-align: center;
@@ -130,7 +272,7 @@ header{
 
 .main-grid {
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 1fr 1200px;
     grid-row-gap: 10px;
 }
 .second-grid{
