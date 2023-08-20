@@ -1,35 +1,80 @@
-﻿@{
+﻿@model List<NewsRDS>
+@{
     ViewData["Title"] = "Home";
 }
-<div class="head">
-    <div class="main-grid head-content" style="background-color:#fff;">
-        <div class="main-block">
-            <div class="main-text ">
-                <button class="btn-main">Кнопка перехода на новость</button>
-            </div>
-            
-        </div>
-        <div class="text">
-            <h4>Краткое содеражние</h4>
-            <h6>Дата</h6>
-        </div>
-        
-        <div class="second-grid">
-            <div class="fleft-block" >
-                <button class="btn-main" href="">Кнопка перехода на новость</button>
-            </div>
 
-            <div class="fright-block">
-                <button class="btn-main" href="">Кнопка перехода на новость</button>
+    <div class="head">
+        <div class="main-grid head-content">
+            <div class="main-block">
+                <div class="main-image">
+                    <a>
+                    <img class="short-image " src="@Model[0].ImgUrl" width="1300" height="550">
+                    </a>
+                <div class="img-text "><h2>
+                    <a href="@Model[0].Url">@Model[0].Title</a>
+                    </h2>
+                    </div>
+                </div>
             </div>
-            <div class="sleft-block">
-                <button class="btn-main" href="">Кнопка перехода на новость</button>
-            </div>
-            <div class="sright-block">
-                <button class="btn-main" href="">Кнопка перехода на новость</button>
-            </div>
-            <div class="body-layout"></div>
+            <div class="second-grid">
+                <div class="fleft-block">
+                    <div class="image-block">
+                        <a href="@Model[1].Url">
+                        <img class="fleft-image w-100" src="@Model[1].ImgUrl" width="600" height="400">
+                        </a>
+                    <div class="img-text ">
+                        <h2>
+                            <a href="@Model[1].Url">@Model[1].Title</a>
+                        </h2>
+                    </div>
+                    </div>
+                
 
+                </div>
+
+                <div class="fright-block">
+                    <div class="image-block">
+                        <a href="@Model[2].Url">
+                        <img class="fleft-image w-100" src="@Model[2].ImgUrl" width="600" height="400">
+                        </a>
+                    <div class="img-text ">
+                        <h2>
+                            <a href="@Model[2].Url">@Model[2].Title</a>
+                        </h2>
+                    </div>
+                    </div>
+
+
+                </div>
+                <div class="sleft-block">
+                    <div class="image-block">
+                        <a href="@Model[3].Url">
+                            <img class="sleft-image w-100" src="@Model[3].ImgUrl">
+                        </a>
+                    <div class="img-text ">
+                        <h2>
+                            <a href="@Model[3].Url">@Model[3].Title</a>
+                        </h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="sright-block">
+                    <div class="image-block">
+                        <a href="@Model[4].Url">
+                            <img class="srigt-image w-100" src="@Model[4].ImgUrl" >
+                        </a>
+                    <div class="img-text ">
+                        <h2>
+                            <a href="@Model[4].Url">@Model[4].Title</a>
+                        </h2>
+                    </div>
+                    </div>
+                </div>
+                <div class="body-layout"></div>
+
+            </div>
         </div>
+       
     </div>
-</div>
+
+

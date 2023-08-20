@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DriftNewsParser.Models
+namespace DriftNews.Models
 {
     public class DriversRDS
     {

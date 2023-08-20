@@ -1,6 +1,7 @@
-
+﻿
 html {
   font-size: 14px;
+  
 }
 
 @media (min-width: 768px) {
@@ -22,6 +23,7 @@ body {
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+    background: #f3f3f3;
 }
 .navbar{
     width:100%;
@@ -110,33 +112,46 @@ header{
 
 }
 .main-block {
-    background: url(https://drift.news/wp-content/uploads/2023/08/MG_9628.jpg);
-    align-items: center;
-    text-align: center;
-    vertical-align: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
     width: 100%;
     color: #fff;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
 }
-.main-block .main-text .btn-main{ 
-    display :inline-block;
-    padding:35px 10px 35px 10px;
-    font-size:18px;
-    border:none;
-    background-color:#fff;
+
+.main-block .img-text h2 a{ 
+    display :inline-grid;
+    margin:-20px;
+    justify-content:center;
+    text-decoration:none;
+    align-content:start;
+    font-size:36px;
+    background:#fff;
     color:#000000;
-    font-size:22px;
+    width:50%;
+    letter-spacing:-0.03em;
+    padding:0.5em 0.15em;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+
+
+}
+.main-block .img-text h2 a:hover{ 
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.image-block {
+    height:100%;
+    width:100%;
 
 }
 .fleft-block {
-    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
     background-repeat: no-repeat;
     text-align: center;
     vertical-align: bottom;
@@ -164,8 +179,31 @@ header{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 }
+.fleft-block .img-text h2 a{ 
+    display :flex;
+    align-items:flex-end;
+    margin:-20px 20px;
+    text-decoration:none;
+    font-size:26px;
+    background:#fff;
+    color:#000000;
+    width:75%;
+    letter-spacing:-0.03em;
+    padding:0.5em 0.15em;
+    font-weight:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+
+
+}
+.fleft-block .img-text h2 a:hover{ 
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 .fright-block {
-    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
     background-repeat: no-repeat;
     text-align: center;
     vertical-align: bottom;
@@ -200,8 +238,31 @@ header{
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+.fright-block .img-text h2 a{ 
+    display :flex;
+    align-items:flex-end;
+    margin:-20px 20px;
+    text-decoration:none;
+    font-size:26px;
+    background:#fff;
+    color:#000000;
+    width:75%;
+    letter-spacing:-0.03em;
+    padding:0.5em 0.15em;
+    font-weight:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+
+
+}
+.fright-block .img-text h2 a:hover{ 
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 .sleft-block {
-    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
     background-repeat: no-repeat;
     text-align: center;
     vertical-align: bottom;
@@ -229,8 +290,30 @@ header{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 }
+.sleft-block .img-text h2 a {
+    display: flex;
+    align-items: flex-end;
+    margin: -20px 20px;
+    text-decoration: none;
+    font-size: 26px;
+    background: #fff;
+    color: #000000;
+    width: 75%;
+    letter-spacing: -0.03em;
+    padding: 0.5em 0.15em;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+}
+
+.sleft-block .img-text h2 a:hover {
+        -webkit-filter: brightness(70%);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
 .sright-block {
-    background: url(https://drift.news/wp-content/uploads/2023/08/Field-copy-768x326.jpg);
     background-repeat: no-repeat;
     text-align: center;
     vertical-align: bottom;
@@ -265,6 +348,30 @@ header{
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+.sright-block .img-text h2 a{ 
+    display :flex;
+    align-items:flex-end;
+    margin:-20px 20px;
+    text-decoration:none;
+    font-size:26px;
+    background:#fff;
+    color:#000000;
+    width:75%;
+    letter-spacing:-0.03em;
+    padding:0.5em 0.15em;
+    font-weight:bold;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+
+
+}
+.sright-block .img-text h2 a:hover{ 
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 .main-block .main-text{
     align-items: center;
     text-align: center;
@@ -272,7 +379,7 @@ header{
 
 .main-grid {
     display: grid;
-    grid-template-rows: 2fr 1fr 1200px;
+    grid-template-rows:800px 700px 600px ;
     grid-row-gap: 10px;
 }
 .second-grid{

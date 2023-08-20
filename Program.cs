@@ -1,4 +1,5 @@
 using DriftNews.Data;
+using DriftNews.Data.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace DriftNews
@@ -9,7 +10,7 @@ namespace DriftNews
         {
             var builder = WebApplication.CreateBuilder(args);
             var connectionString = builder.Configuration.GetConnectionString("MSSQL");
-
+            builder.Services.AddTransient<Repository>();
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString));

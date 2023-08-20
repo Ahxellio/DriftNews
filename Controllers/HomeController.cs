@@ -1,4 +1,5 @@
-﻿using DriftNews.Models;
+﻿using DriftNews.Data.Repository;
+using DriftNews.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -6,9 +7,16 @@ namespace DriftNews.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly Repository _repository;
+        public HomeController(Repository repository)
+        {
+            _repository = repository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var model = _repository.GetNews();
+            return View(model);
         }
 
 
@@ -17,5 +25,9 @@ namespace DriftNews.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        //public IActionResult GetNewsFromDB()
+        //{
+            
+        //}
     }
 }

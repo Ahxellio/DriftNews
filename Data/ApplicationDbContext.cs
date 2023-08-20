@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using DriftNews.Models;
-using DriftNewsParser.Models;
 
 namespace DriftNews.Data
 {
@@ -10,9 +9,9 @@ namespace DriftNews.Data
         {
 
         }
-        public DbSet<NewsRDS> News { get; set; }
+        public DbSet<NewsRDS> NewsRDS { get; set; }
         public DbSet<Race> Races { get; set; }
-        public DbSet<DriversRDS> Drivers { get; set; }
+        public DbSet<DriversRDS> DriversRDS { get; set; }
         public DbSet<ResultsRDS> ResultsRDS { get; set; }
         public DbSet<DriversFDPRO> DriversFDPRO { get; set; }
         public DbSet<ResultsFDPRO> ResultsFDPRO { get; set; }
