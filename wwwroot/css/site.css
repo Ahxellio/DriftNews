@@ -130,7 +130,7 @@ header{
     font-size:36px;
     background:#fff;
     color:#000000;
-    width:50%;
+    width:70%;
     letter-spacing:-0.03em;
     padding:0.5em 0.15em;
     font-weight:bold;
@@ -146,16 +146,43 @@ header{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.main-block .text{ 
+    display :inline-grid;
+    margin:-20px;
+    justify-content:center;
+    text-decoration:none;
+    align-content:start;
+    color:#000000;
+    padding:2.5em 11.15em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+
+
+}
+.main-block .date{ 
+    display :inline-grid;
+    margin:-20px;
+    justify-content:center;
+    text-decoration:none;
+    align-content:start;
+    color:#808080;
+    font-size:12px;
+    padding:0.5em 1.15em;
+    -webkit-filter: brightness(150%);
+
+
+}
 .image-block {
     height:100%;
     width:100%;
 
 }
 .fleft-block {
+
     background-repeat: no-repeat;
     text-align: center;
     vertical-align: bottom;
-    height: 500px;
+    height: 700px;
     color: #fff;
     display: flex;
     align-items: flex-end;
@@ -203,6 +230,30 @@ header{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.fleft-block .text {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #000000;
+    padding: 2.5em 1.15em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+}
+
+.fleft-block .date {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #808080;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+    padding: 0.5em 1.15em;
+    -webkit-filter: brightness(150%);
+}
 .fright-block {
     background-repeat: no-repeat;
     text-align: center;
@@ -216,6 +267,7 @@ header{
     flex-direction: column-reverse;
     flex-wrap: nowrap;
 }
+
 .fright-block .btn-main {
     display: inline-block;
     padding: 35px 10px 35px 10px;
@@ -261,6 +313,30 @@ header{
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+.fright-block .text {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #000000;
+    padding: 2.5em 1.15em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+}
+
+.fright-block .date {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #808080;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+    padding: 0.5em 1.15em;
+    -webkit-filter: brightness(150%);
 }
 .sleft-block {
     background-repeat: no-repeat;
@@ -313,6 +389,30 @@ header{
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
+.sleft-block .text {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #000000;
+    padding: 2.5em 1.15em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+}
+
+.sleft-block .date {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #808080;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+    padding: 0.5em 1.15em;
+    -webkit-filter: brightness(150%);
+}
 .sright-block {
     background-repeat: no-repeat;
     text-align: center;
@@ -372,6 +472,30 @@ header{
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
+.sright-block .text {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #000000;
+    padding: 2.5em 1.15em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    -webkit-filter: brightness(100%);
+}
+
+.sright-block .date {
+    display: inline-grid;
+    margin: -20px;
+    justify-content: center;
+    text-decoration: none;
+    align-content: start;
+    color: #808080;
+    font-size: 12px;
+    letter-spacing: -0.03em;
+    padding: 0.5em 1.15em;
+    -webkit-filter: brightness(150%);
+}
 .main-block .main-text{
     align-items: center;
     text-align: center;
@@ -379,7 +503,7 @@ header{
 
 .main-grid {
     display: grid;
-    grid-template-rows:800px 700px 600px ;
+    grid-template-rows:900px 900px 900px ;
     grid-row-gap: 10px;
 }
 .second-grid{

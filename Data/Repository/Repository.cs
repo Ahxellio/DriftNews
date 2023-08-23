@@ -9,9 +9,13 @@ namespace DriftNews.Data.Repository
         {
             _context = context;
         }
-        public List<NewsRDS> GetNews ()
+        public List<NewsRDS> GetNewsRDS ()
         {
             return _context.NewsRDS.ToList();
+        }
+        public List<NewsFD> GetNewsFD()
+        {
+            return _context.NewsFD.ToList();
         }
     }
 }

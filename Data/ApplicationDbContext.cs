@@ -10,6 +10,7 @@ namespace DriftNews.Data
 
         }
         public DbSet<NewsRDS> NewsRDS { get; set; }
+        public DbSet<NewsFD> NewsFD { get; set; }
         public DbSet<Race> Races { get; set; }
         public DbSet<DriversRDS> DriversRDS { get; set; }
         public DbSet<ResultsRDS> ResultsRDS { get; set; }

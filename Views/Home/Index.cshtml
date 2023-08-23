@@ -1,4 +1,4 @@
-﻿@model List<NewsRDS>
+﻿@model List<NewsFD>
 @{
     ViewData["Title"] = "Home";
 }
@@ -10,11 +10,14 @@
                     <a>
                     <img class="short-image " src="@Model[0].ImgUrl" width="1300" height="550">
                     </a>
-                <div class="img-text "><h2>
-                    <a href="@Model[0].Url">@Model[0].Title</a>
-                    </h2>
+                    <div class="img-text "><h2>
+                        <a href="@Model[0].Url">@Model[0].Title</a>
+                        </h2>
                     </div>
+                    <div class="text">@Model[0].Description</div>
+                    <div class="date">@Model[0].Date</div>
                 </div>
+                
             </div>
             <div class="second-grid">
                 <div class="fleft-block">
@@ -27,6 +30,8 @@
                             <a href="@Model[1].Url">@Model[1].Title</a>
                         </h2>
                     </div>
+                    <div class="text">@Model[1].Description</div>
+                    <div class="date">@Model[1].Date</div>
                     </div>
                 
 
@@ -42,6 +47,8 @@
                             <a href="@Model[2].Url">@Model[2].Title</a>
                         </h2>
                     </div>
+                    <div class="text">@Model[2].Description</div>
+                    <div class="date">@Model[2].Date</div>
                     </div>
 
 
@@ -55,7 +62,10 @@
                         <h2>
                             <a href="@Model[3].Url">@Model[3].Title</a>
                         </h2>
+
                     </div>
+                    <div class="text">@Model[3].Description</div>
+                    <div class="date">@Model[3].Date</div>
                     </div>
                 </div>
                 <div class="sright-block">
@@ -68,6 +78,8 @@
                             <a href="@Model[4].Url">@Model[4].Title</a>
                         </h2>
                     </div>
+                    <div class="text">@Model[4].Description</div>
+                    <div class="date">@Model[4].Date</div>
                     </div>
                 </div>
                 <div class="body-layout"></div>

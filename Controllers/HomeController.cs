@@ -15,7 +15,7 @@ namespace DriftNews.Controllers
 
         public IActionResult Index()
         {
-            var model = _repository.GetNews();
+            var model = _repository.GetNewsFD();
             return View(model);
         }
 
