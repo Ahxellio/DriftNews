@@ -134,7 +134,6 @@ header{
     letter-spacing:-0.03em;
     padding:0.5em 0.15em;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
     transition: .5s;
 
@@ -155,8 +154,8 @@ header{
     align-content:start;
     color:#000000;
     padding:2.5em 11.15em;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
+    font-size:18px;
 
 
 }
@@ -204,7 +203,6 @@ header{
     color:#000000;
     font-size:22px;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 }
 .fleft-block .img-text h2 a{ 
@@ -219,7 +217,6 @@ header{
     letter-spacing:-0.03em;
     padding:0.5em 0.15em;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
     transition: .5s;
 
@@ -240,7 +237,6 @@ header{
     align-content: start;
     color: #000000;
     padding: 2.5em 1.15em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
 }
 
@@ -279,7 +275,6 @@ header{
     color: #000000;
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .fright-block .fr-text {
     display: inline-block;
@@ -290,7 +285,6 @@ header{
     color: #000000;
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .fright-block .img-text h2 a{ 
     display :flex;
@@ -304,7 +298,6 @@ header{
     letter-spacing:-0.03em;
     padding:0.5em 0.15em;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
     transition: .5s;
 
@@ -324,8 +317,7 @@ header{
     text-decoration: none;
     align-content: start;
     color: #000000;
-    padding: 2.5em 1.15em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2.5em 1.15em;;
     -webkit-filter: brightness(100%);
 }
 
@@ -366,7 +358,6 @@ header{
     color:#000000;
     font-size:22px;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 
 }
 .sleft-block .img-text h2 a {
@@ -381,7 +372,6 @@ header{
     letter-spacing: -0.03em;
     padding: 0.5em 0.15em;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
     transition: .5s;
 }
@@ -401,7 +391,6 @@ header{
     align-content: start;
     color: #000000;
     padding: 2.5em 1.15em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
 }
 
@@ -439,7 +428,6 @@ header{
     color: #000000;
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .sright-block .sr-text {
     display: inline-block;
@@ -450,7 +438,6 @@ header{
     color: #000000;
     font-size: 22px;
     font-weight: bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 .sright-block .img-text h2 a{ 
     display :flex;
@@ -464,7 +451,6 @@ header{
     letter-spacing:-0.03em;
     padding:0.5em 0.15em;
     font-weight:bold;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
     transition: .5s;
 
@@ -485,7 +471,6 @@ header{
     align-content: start;
     color: #000000;
     padding: 2.5em 1.15em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
 }
 
@@ -528,7 +513,6 @@ header{
     width:500px;
     font-size:16px;
     font-weight:bold;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
 }
 .desc {
@@ -541,7 +525,6 @@ header{
     padding: 2.5em 1.15em;
     width: 500px;
     font-size: 14px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
 }
 .newsblock {
@@ -568,7 +551,6 @@ header{
 }
 .newsOther .newsTitle{
     font-size: 16px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
     font-weight:bold;
     text-decoration:none;
@@ -576,6 +558,44 @@ header{
 }
 .newsOther .newsDesc{
     font-size: 14px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     -webkit-filter: brightness(100%);
+}
+.dr_list {
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    grid-column-gap: 20px;
+    grid-row-gap:20px;
+    margin: 30px;
+    text-decoration: none;
+    justify-content:space-around;
+}
+.dr_list  a {
+    text-decoration: none;
+    color:#000;
+    font-size:20px;
+    -webkit-filter: brightness(100%);
+    transition: .5s;
+}
+.dr_list a:hover{
+     -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.dr_list a .dr_list-profile  {
+    text-align:center;
+    text-decoration: none;
+    background-color:#fff;
+}
+.dr_list a .dr_list-profile .dr_list-profile-name  {
+    text-align:center;
+    justify-content: center;
+    text-decoration: none;
+
+}
+.dr_list a .dr_list-profile img {
+    text-decoration:none;
+    width:40%;
+    height:40%;
 }

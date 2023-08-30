@@ -37,8 +37,15 @@
                                 <li><a class="dropdown-item" asp-controller="Championships" asp-action="FD">Formula Drift</a></li>
                             </ul>
                         </li>
-                        <li >
-                            <a  asp-area="" asp-controller="Drivers" asp-action="Index">Drivers</a>
+                        <li class=" dropdown ">
+                            <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Drivers
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" asp-controller="Drivers" asp-action="RDS">RDS</a></li>
+                                <li><a class="dropdown-item" asp-controller="Drivers" asp-action="DMEC">DMEC</a></li>
+                                <li><a class="dropdown-item" asp-controller="Drivers" asp-action="FD">Formula Drift</a></li>
+                            </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

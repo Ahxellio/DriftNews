@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DriversRDS>
+@{
+    ViewData["Title"] = "RDS";
+}
+<div class="dr_list">
+    @foreach (var obj in Model)
+    {
+        <a href="@obj.Href">
+            <div class="dr_list-profile">
+                <img src="@obj.ImgSrc">
+                <div class="dr_list-profile-name">
+                    @obj.Name
+                </div>
+                <div class="dr_list-profile-age">
+                    Команда: @obj.Team
+                </div>
+                <div class="dr_list-profile-number">
+                    Номер: @obj.Number
+                </div>
+            </div>
+        </a>
+    }
+</div>

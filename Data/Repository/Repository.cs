@@ -17,5 +17,13 @@ namespace DriftNews.Data.Repository
         {
             return _context.NewsFD.ToList();
         }
+        public List<DriversFDPRO> GetDriversFDPRO()
+        {
+            return _context.DriversFDPRO.ToList();
+        }
+        public List<DriversRDS> GetDriversRDS()
+        {
+            return _context.DriversRDS.ToList();
+        }
     }
 }

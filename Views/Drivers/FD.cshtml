@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DriversFDPRO>
+@{
+    ViewData["Title"] = "FD";
+}
+
+<div class="dr_list">
+    @foreach(var obj in Model)
+    {
+        <a href="@obj.Href">
+            <div class="dr_list-profile">
+                <img src="@obj.ImgSrc">
+                <div class="dr_list-profile-name">
+                    @obj.Name
+                </div>
+                <div class="dr_list-profile-age">
+                    @obj.Age
+                </div>
+                <div class="dr_list-profile-number">
+                    Number: @obj.Number
+                </div>
+            </div>
+        </a>
+    }
+</div>
+
