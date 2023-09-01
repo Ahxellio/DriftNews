@@ -25,5 +25,13 @@ namespace DriftNews.Data.Repository
         {
             return _context.DriversRDS.ToList();
         }
+        public List<ResultsFDPRO> GetResultsFDPRO()
+        {
+            return _context.ResultsFDPRO.ToList();
+        }
+        public IEnumerable<ResultsRDS> GetResultsRDS()
+        {
+            return _context.ResultsRDS.ToList();
+        }
     }
 }

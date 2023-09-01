@@ -30,5 +30,6 @@ namespace DriftNews.Models
         public string? R5 { get; set; }
         public string? R6 { get; set; }
         public string? R7 { get; set; }
+        //public string? R8 { get; set; }
     }
 }

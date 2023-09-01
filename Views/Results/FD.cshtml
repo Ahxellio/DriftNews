@@ -1,7 +1,83 @@
-﻿
+﻿@model IEnumerable<ResultsFDPRO>
 @{
     ViewData["Title"] = "FD";
 }
-
-<h1>FD</h1>
+<h2>Formula Drift 2023 results</h2>
+<table class="table">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            Drifter
+        </th>
+        <th>
+            R1 Long Beach
+        </th>
+        <th>
+            R2 Atlanta
+        </th>
+        <th>
+            R3 Orlando
+        </th>
+        <th>
+            R4 Englishtown
+        </th>
+        <th>
+            R5 St. Louis
+        </th>
+        <th>
+            R6 Monroe
+        </th>
+        <th>
+            R7 Utah
+        </th>
+@*        <th>
+            R8 Irwindale
+        </th>*@
+        <th>
+            Total
+        </th>
+    </tr>
+    @foreach(var obj in Model)
+            {
+    <tr>
+            <td>
+                @obj.Place
+                
+            </td>
+            <td>
+                <a href="@obj.ProfileUrl">@obj.Name</a>
+            </td>
+            <td>
+                @obj.R1
+            </td>
+            <td>
+                @obj.R2
+            </td>
+            <td>
+                @obj.R3
+            </td>
+            <td>
+                @obj.R4
+            </td>
+            <td>
+                @obj.R5
+            </td>
+            <td>
+                @obj.R6
+            </td>
+            <td>
+                @obj.R7
+            </td>
+@*            <td>
+                @obj.R8;
+            </td>*@
+            <td>
+                @obj.AllPoints
+            </td>
+            
+    </tr>
+    }
+</table>
 

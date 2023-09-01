@@ -1,9 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DriftNews.Data.Repository;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DriftNews.Controllers
 {
     public class ResultsController : Controller
     {
+        private readonly Repository _repository;
+        public ResultsController(Repository repository)
+        {
+            _repository = repository;
+        }
         public IActionResult Index()
         {
             return View();
@@ -11,7 +17,8 @@ namespace DriftNews.Controllers
         }
         public IActionResult RDS()
         {
-            return View();
+            var model = _repository.GetResultsRDS();
+            return View(model);
         }
         public IActionResult DMEC()
         {
@@ -19,7 +26,8 @@ namespace DriftNews.Controllers
         }
         public IActionResult FD()
         {
-            return View();
+            var model = _repository.GetResultsFDPRO();
+            return View(model);
         }
     }
 }
