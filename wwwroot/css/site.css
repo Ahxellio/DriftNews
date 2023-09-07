@@ -638,3 +638,20 @@ header{
 .table tbody tr:nth-child(even){
 	background: #f3f3f3;
 }
+.page-link
+{
+    color:#000000;
+    
+}
+.active > .page-link, .page-link.active
+{
+    color:#fff;
+    background-color:#000000;
+    border-color:#fff;
+    
+}
+.pagination {
+    --bs-pagination-hover-color: #000000;
+    --bs-pagination-focus-box-shadow: 0;
+    --bs-pagination-focus-color:#fff;
+}
