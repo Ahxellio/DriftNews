@@ -22,7 +22,8 @@ namespace DriftNews.Controllers
         }
         public IActionResult DMEC()
         {
-            return View();
+            var model = _repository.GetResultsDMEC();
+            return View(model);
         }
         public IActionResult FD()
         {

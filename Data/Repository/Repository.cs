@@ -33,5 +33,13 @@ namespace DriftNews.Data.Repository
         {
             return _context.ResultsRDS.ToList();
         }
+        public IEnumerable<ResultsDMEC> GetResultsDMEC()
+        {
+            return _context.ResultsDMEC.ToList();
+        }
+        public List<NewsDMEC> GetNewsDMEC()
+        {
+            return _context.NewsDMEC.ToList();
+        }
     }
 }

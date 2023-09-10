@@ -31,9 +31,20 @@ namespace DriftNews.Controllers
             this.ViewBag.Pager = pager;
             return View(data);
         }
-        public IActionResult DMEC()
+        public IActionResult DMEC(int pg = 1)
         {
-            return View();
+            List<NewsDMEC> news = _repository.GetNewsDMEC();
+            const int pageSize = 10;
+            if (pg < 1)
+            {
+                pg = 1;
+            }
+            int recsCount = news.Count();
+            var pager = new Pager(recsCount, pg, pageSize);
+            int recSkip = (pg - 1) * pageSize;
+            var data = news.Skip(recSkip).Take(pager.PageSize).ToList();
+            this.ViewBag.Pager = pager;
+            return View(data);
         }
         public IActionResult FD(int pg = 1)
         {
