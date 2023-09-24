@@ -655,3 +655,107 @@ header{
     --bs-pagination-focus-box-shadow: 0;
     --bs-pagination-focus-color:#fff;
 }
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 2em;
+}
+.login-form:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+}
+.flex-row {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.lf--label {
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f6f8;
+    cursor: pointer;
+}
+
+.lf--input {
+    flex: 1;
+    padding: 1em;
+    border: 0;
+    color: #8f8f8f;
+    font-size: 1rem;
+}
+
+    .lf--input:focus {
+        outline: none;
+        transition: transform 0.15s ease;
+        transform: scale(1.1);
+    }
+
+.lf--submit {
+    display: block;
+    padding: 1em;
+    width: 25%;
+    background: linear-gradient(to right, #35c3c1, #00d6b7);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+    .lf--submit:focus {
+        outline: none;
+        transition: transform 0.15s ease-in-out;
+        transform: scale(1.1);
+    }
+
+.lf--forgot {
+    display: block;
+    padding: 1em;
+    margin-top: 1em;
+    width: 25%;
+    background: linear-gradient(to right, #000000, #000);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.75em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.lf--forgot:focus {
+    outline: none;
+    transition: transform 0.15s ease-in-out;
+    transform: scale(1.1);
+}
+
+::-moz-placeholder {
+    color: #8f8f8f;
+}
+
+:-ms-input-placeholder {
+    color: #8f8f8f;
+}
+
+::placeholder {
+    color: #8f8f8f;
+}
+.login-navbar{
+    margin-left:150px;
+}
+.register-navbar {
+    font-weight:bold;
+    background: linear-gradient(to right, #35c3c1, #00d6b7);
+}

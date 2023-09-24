@@ -22,9 +22,6 @@
                 <div class="navbar-wrap">
                     <ul class="navbar-menu">
                         <li >
-                            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li >
                             <a  asp-area="" asp-controller="News" asp-action="Index">News</a>
                         </li>
                         <li class=" dropdown ">
@@ -57,7 +54,8 @@
                                 <li><a class="dropdown-item" asp-controller="Results" asp-action="FD">Formula Drift</a></li>
                             </ul>
                         </li>
-
+                        <li class="login-navbar"><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+                        <li class="register-navbar"><a asp-area="" asp-controller="Account" asp-action="Register">SIGN UP</a></li>
                     </ul>
                 </div>
             </div>
