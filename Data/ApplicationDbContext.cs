@@ -28,6 +28,7 @@ namespace DriftNews.Data
                 builder.HasData(new User
                 {
                     Id = 1,
+                    Username = "Admin",
                     Name = "Admin",
                     Password = HashPasswordHelper.HashPassword("cisco"),
                     Role = Role.Admin

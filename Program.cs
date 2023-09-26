@@ -1,5 +1,8 @@
 using DriftNews.Data;
 using DriftNews.Data.Repository;
+using DriftNews.Interfaces;
+using DriftNews.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 namespace DriftNews
@@ -11,9 +14,18 @@ namespace DriftNews
             var builder = WebApplication.CreateBuilder(args);
             var connectionString = builder.Configuration.GetConnectionString("MSSQL");
             builder.Services.AddTransient<Repository>();
+            builder.Services.AddTransient<UserRepository>();
+            builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(connectionString));
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+            {
+                options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+            });
+            
+            
 
             var app = builder.Build();
 
@@ -30,6 +42,7 @@ namespace DriftNews
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

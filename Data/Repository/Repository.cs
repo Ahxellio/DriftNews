@@ -1,4 +1,5 @@
-﻿using DriftNews.Models;
+﻿using DriftNews.Interfaces;
+using DriftNews.Models;
 
 namespace DriftNews.Data.Repository
 {
