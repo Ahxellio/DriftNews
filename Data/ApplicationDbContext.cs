@@ -9,7 +9,7 @@ namespace DriftNews.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
         public DbSet<NewsRDS> NewsRDS { get; set; }
         public DbSet<NewsFD> NewsFD { get; set; }

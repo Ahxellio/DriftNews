@@ -11,57 +11,116 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        
-        <nav class="navbar " style="background:#fff">
+    @if (User.Identity.IsAuthenticated == false)
+    {
+        <header>
 
-            <div class="container">
-                <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img height="40" src="https://drift.news/wp-content/uploads/2022/12/drift.news-LOGO_full-Black-Main_80px@2x.png" alt="DriftNews">
-                </a>
-                <div class="navbar-wrap">
-                    <ul class="navbar-menu">
-                        <li >
-                            <a  asp-area="" asp-controller="News" asp-action="Index">News</a>
-                        </li>
-                        <li class=" dropdown ">
-                            <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Championships
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" asp-controller="Championships" asp-action="RDS">RDS</a></li>
-                                <li><a class="dropdown-item" asp-controller="Championships" asp-action="DMEC">DMEC</a></li>
-                                <li><a class="dropdown-item" asp-controller="Championships" asp-action="FD">Formula Drift</a></li>
-                            </ul>
-                        </li>
-                        <li class=" dropdown ">
-                            <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Drivers
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" asp-controller="Drivers" asp-action="RDS">RDS</a></li>
-                                <li><a class="dropdown-item" asp-controller="Drivers" asp-action="DMEC">DMEC</a></li>
-                                <li><a class="dropdown-item" asp-controller="Drivers" asp-action="FD">Formula Drift</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Results
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" asp-controller="Results" asp-action="RDS">RDS</a></li>
-                                <li><a class="dropdown-item" asp-controller="Results" asp-action="DMEC">DMEC</a></li>
-                                <li><a class="dropdown-item" asp-controller="Results" asp-action="FD">Formula Drift</a></li>
-                            </ul>
-                        </li>
-                        <li class="login-navbar"><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
-                        <li class="register-navbar"><a asp-area="" asp-controller="Account" asp-action="Register">SIGN UP</a></li>
-                    </ul>
+            <nav class="navbar " style="background:#fff">
+
+                <div class="container">
+                    <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img height="40" src="https://drift.news/wp-content/uploads/2022/12/drift.news-LOGO_full-Black-Main_80px@2x.png" alt="DriftNews">
+                    </a>
+                    <div class="navbar-wrap">
+                        <ul class="navbar-menu">
+                            <li>
+                                <a asp-area="" asp-controller="News" asp-action="Index">News</a>
+                            </li>
+                            <li class=" dropdown ">
+                                <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Championships
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" asp-controller="Championships" asp-action="RDS">RDS</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Championships" asp-action="DMEC">DMEC</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Championships" asp-action="FD">Formula Drift</a></li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown ">
+                                <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Drivers
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" asp-controller="Drivers" asp-action="RDS">RDS</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Drivers" asp-action="DMEC">DMEC</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Drivers" asp-action="FD">Formula Drift</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Results
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" asp-controller="Results" asp-action="RDS">RDS</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Results" asp-action="DMEC">DMEC</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Results" asp-action="FD">Formula Drift</a></li>
+                                </ul>
+                            </li>
+                            <li class="login-navbar"><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+                            <li class="register-navbar"><a asp-area="" asp-controller="Account" asp-action="Register">SIGN UP</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        
-        </nav>
-    </header>
+
+            </nav>
+        </header>
+    }
+    
+    @if (User.Identity.IsAuthenticated)
+    {
+        <header>
+
+            <nav class="navbar " style="background:#fff">
+
+                <div class="container">
+                    <a class="logo" asp-area="" asp-controller="Home" asp-action="Index">
+                        <img height="40" src="https://drift.news/wp-content/uploads/2022/12/drift.news-LOGO_full-Black-Main_80px@2x.png" alt="DriftNews">
+                    </a>
+                    <div class="navbar-wrap">
+                        <ul class="navbar-menu">
+                            <li>
+                                <a asp-area="" asp-controller="News" asp-action="Index">News</a>
+                            </li>
+                            <li class=" dropdown ">
+                                <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Championships
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" asp-controller="Championships" asp-action="RDS">RDS</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Championships" asp-action="DMEC">DMEC</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Championships" asp-action="FD">Formula Drift</a></li>
+                                </ul>
+                            </li>
+                            <li class=" dropdown ">
+                                <a class="dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Drivers
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" asp-controller="Drivers" asp-action="RDS">RDS</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Drivers" asp-action="DMEC">DMEC</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Drivers" asp-action="FD">Formula Drift</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Results
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" asp-controller="Results" asp-action="RDS">RDS</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Results" asp-action="DMEC">DMEC</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Results" asp-action="FD">Formula Drift</a></li>
+                                </ul>
+                            </li>
+                           
+                            <li class="login-navbar"><a>@User.Identity.Name</a></li>
+                            <li class="register-navbar"><a asp-area="" asp-controller="Account" asp-action="Logout">LOGOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+    }
     <div class="container">
         <main role="main">
             @RenderBody()
