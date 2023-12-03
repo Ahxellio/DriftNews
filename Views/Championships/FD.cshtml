@@ -11,19 +11,55 @@
     }
 }
 <h2>Formula Drift News</h2>
-@foreach(var obj in Model)
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
 {
-    <div class="newsblock">
-        <div class="newsImage">
-            <a href="@obj.Url"><img src="@obj.ImgUrl"></a>
+    @foreach (var obj in Model)
+    {
+        <div class="newsblock">
+            <div class="newsImage">
+                <a href="@obj.Url"><img src="@obj.ImgUrl"></a>
+            </div>
+
+            <div class="newsOther">
+                <a class="newsTitle" href="@obj.Url">@obj.Title</a>
+                <div class="newsDesc">@obj.Description</div>
+            </div>
         </div>
-        
-        <div class="newsOther">
-            <a class="newsTitle" href="@obj.Url">@obj.Title</a>
-            <div class="newsDesc">@obj.Description</div>
-        </div>
-    </div>
+    }
 }
+@if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+{
+    @foreach (var obj in Model)
+    {
+        <div class="newsblock">
+            <div class="newsImage">
+                <a href="@obj.Url"><img src="@obj.ImgUrl"></a>
+            </div>
+
+            <div class="newsOther">
+                <a class="newsTitle" href="@obj.Url">@obj.Title</a>
+                <div class="newsDesc">@obj.Description</div>
+            </div>
+        </div>
+    }
+}
+@if (User.Identity.IsAuthenticated == false)
+{
+    @foreach (var obj in Model)
+    {
+        <div class="newsblock">
+            <div class="newsImage">
+                <a href="@obj.Url"><img src="@obj.ImgUrl"></a>
+            </div>
+
+            <div class="newsOther">
+                <a class="newsTitle" href="@obj.Url">@obj.Title</a>
+                <div class="newsDesc">@obj.Description</div>
+            </div>
+        </div>
+    }
+}
+
 <div class="container">
     @if (pager.TotalPages > 0)
     {

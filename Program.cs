@@ -4,6 +4,7 @@ using DriftNews.Interfaces;
 using DriftNews.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using EasyData.Services;
 
 namespace DriftNews
 {

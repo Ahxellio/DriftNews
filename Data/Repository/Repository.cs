@@ -1,9 +1,10 @@
 ﻿using DriftNews.Interfaces;
 using DriftNews.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DriftNews.Data.Repository
 {
-    public class Repository
+    public class Repository : IRepository
     {
         private readonly ApplicationDbContext _context;
         public Repository(ApplicationDbContext context)
@@ -42,5 +43,8 @@ namespace DriftNews.Data.Repository
         {
             return _context.NewsDMEC.ToList();
         }
+
+        
+
     }
 }
