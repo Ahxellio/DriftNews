@@ -1,5 +1,5 @@
 ﻿﻿
-@model NewsRDS
+@model News
 
 <form method="post">
     <div class="border p-3 mt-4">
@@ -40,7 +40,7 @@
             <span asp-validation-for="Championship" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
-        <a asp-asp-controller="Category" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        <a asp-asp-controller="News" asp-action="Index" class="btn btn-secondary" style="width:150px">
             Back To List
         </a>
     </div>

@@ -1,21 +1,25 @@
-﻿using DriftNews.Data.Repository;
+﻿using DriftNews.Data;
+using DriftNews.Data.Repository;
 using DriftNews.Models;
 using DriftNews.Models.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace DriftNews.Controllers
 {
     public class NewsController : Controller
     {
+        private readonly ApplicationDbContext _db;
         private readonly Repository _repository;
-        public NewsController(Repository repository)
+        public NewsController(Repository repository, ApplicationDbContext db)
         {
             _repository = repository;
+            _db = db;
         }
         public IActionResult Index( int pg = 1)
         {
-            List<NewsFD> news = _repository.GetNewsFD();
+            List<News> news = _db.News.OrderBy(d => d.Date).Reverse().ToList();
             const int pageSize = 5;
             if(pg < 1)
             {

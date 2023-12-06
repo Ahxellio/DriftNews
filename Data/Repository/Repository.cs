@@ -11,13 +11,21 @@ namespace DriftNews.Data.Repository
         {
             _context = context;
         }
-        public List<NewsRDS> GetNewsRDS ()
+        public List<News> GetNewsRDS ()
         {
-            return _context.NewsRDS.ToList();
+            return _context.News.Where(c => c.Championship == "RDS").OrderBy(d => d.Date).Reverse().ToList();
         }
-        public List<NewsFD> GetNewsFD()
+        public List<News> GetNewsFD()
         {
-            return _context.NewsFD.ToList();
+            return _context.News.Where(c => c.Championship == "FD").OrderBy(d => d.Date).Reverse().ToList();
+        }
+        public List<News> GetNewsDMEC()
+        {
+            return _context.News.Where(c => c.Championship == "DMEC").OrderBy(d => d.Date).Reverse().ToList();
+        }
+        public List<News> GetNews()
+        {
+            return _context.News.OrderBy(d => d.Date).ToList();
         }
         public List<DriversFDPRO> GetDriversFDPRO()
         {
@@ -39,10 +47,7 @@ namespace DriftNews.Data.Repository
         {
             return _context.ResultsDMEC.ToList();
         }
-        public List<NewsDMEC> GetNewsDMEC()
-        {
-            return _context.NewsDMEC.ToList();
-        }
+
 
         
 

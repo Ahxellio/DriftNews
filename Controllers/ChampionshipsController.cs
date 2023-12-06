@@ -3,6 +3,7 @@ using DriftNews.Models;
 using Microsoft.AspNetCore.Mvc;
 using DriftNews.Data.Repository;
 using DriftNews.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DriftNews.Controllers
 {
@@ -26,11 +27,11 @@ namespace DriftNews.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(NewsRDS obj)
+        public IActionResult Create(News obj)
         {
             if (ModelState.IsValid)
             {
-                _db.NewsRDS.Add(obj);
+                _db.News.Add(obj);
                 _db.SaveChanges();
                 TempData["success"] = "Category Created Succesfully";
                 return RedirectToAction("RDS");
@@ -40,20 +41,20 @@ namespace DriftNews.Controllers
         public IActionResult Edit(int? id)
         {
             if (id == null || id == 0) { return NotFound(); }
-            var newsFromDb = _db.NewsRDS.Find(id);
+            var newsFromDb = _db.News.Find(id);
             if (newsFromDb == null) { return NotFound(); }
             return View(newsFromDb);
         }
         //Post
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(NewsRDS obj)
+        public IActionResult Edit(News obj)
         {
             if (ModelState.IsValid)
             {
-                _db.NewsRDS.Update(obj);
+                _db.News.Update(obj);
                 _db.SaveChanges();
-                TempData["success"] = "Category Edited Succesfully";
+                TempData["success"] = $"{obj.Title} Edited Succesfully";
                 return RedirectToAction("RDS");
             }
             return View(obj);
@@ -61,7 +62,7 @@ namespace DriftNews.Controllers
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0) { return NotFound(); }
-            var categoryFromDb = _db.NewsRDS.Find(id);
+            var categoryFromDb = _db.News.Find(id);
             if (categoryFromDb == null) { return NotFound(); }
             return View(categoryFromDb);
         }
@@ -70,17 +71,17 @@ namespace DriftNews.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeletePOST(int? id)
         {
-            var newsFromDb = _db.NewsRDS.Find(id);
+            var newsFromDb = _db.News.Find(id);
             if (newsFromDb == null) { return NotFound(); }
-            _db.NewsRDS.Remove(newsFromDb);
+            _db.News.Remove(newsFromDb);
             _db.SaveChanges();
-            TempData["success"] = "Category Deleted Succesfully";
-            return RedirectToAction("Index");
+            TempData["success"] = $"{newsFromDb.Title} Deleted Succesfully";
+            return RedirectToAction("Index", "News");
         }
         public IActionResult RDS(int pg = 1)
         {
-            List<NewsRDS> news = _repository.GetNewsRDS();
-            const int pageSize = 3;
+            List<News> news = _repository.GetNewsRDS();
+            const int pageSize = 5;
             if (pg < 1)
             {
                 pg = 1;
@@ -94,8 +95,8 @@ namespace DriftNews.Controllers
         }
         public IActionResult DMEC(int pg = 1)
         {
-            List<NewsDMEC> news = _repository.GetNewsDMEC();
-            const int pageSize = 10;
+            List<News> news = _repository.GetNewsDMEC();
+            const int pageSize = 5;
             if (pg < 1)
             {
                 pg = 1;
@@ -109,7 +110,7 @@ namespace DriftNews.Controllers
         }
         public IActionResult FD(int pg = 1)
         {
-            List<NewsFD> news = _repository.GetNewsFD();
+            List<News> news = _repository.GetNewsFD();
             const int pageSize = 5;
             if (pg < 1)
             {

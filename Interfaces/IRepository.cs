@@ -6,13 +6,13 @@ namespace DriftNews.Interfaces
 {
     public interface IRepository
     {
-        public List<NewsRDS> GetNewsRDS();
+        public List<News> GetNewsRDS();
         public List<DriversRDS> GetDriversRDS();
         public IEnumerable<ResultsRDS> GetResultsRDS();
-        public List<NewsFD> GetNewsFD();
+        public List<News> GetNewsFD();
         public List<DriversFDPRO> GetDriversFDPRO();
         public List<ResultsFDPRO> GetResultsFDPRO();
         public IEnumerable<ResultsDMEC> GetResultsDMEC();
-        public List<NewsDMEC> GetNewsDMEC();
+        public List<News> GetNewsDMEC();
     }
 }

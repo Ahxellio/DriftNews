@@ -11,15 +11,13 @@ namespace DriftNews.Data
         {
             Database.EnsureCreated();
         }
-        public DbSet<NewsRDS> NewsRDS { get; set; }
-        public DbSet<NewsFD> NewsFD { get; set; }
+        public DbSet<News> News { get; set; }
         public DbSet<Race> Races { get; set; }
         public DbSet<DriversRDS> DriversRDS { get; set; }
         public DbSet<ResultsRDS> ResultsRDS { get; set; }
         public DbSet<DriversFDPRO> DriversFDPRO { get; set; }
         public DbSet<ResultsFDPRO> ResultsFDPRO { get; set; }
         public DbSet<ResultsDMEC>  ResultsDMEC { get; set; }
-        public DbSet<NewsDMEC> NewsDMEC { get; set; }
         public DbSet<User> Users { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
