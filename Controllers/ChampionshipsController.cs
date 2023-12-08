@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using DriftNews.Data.Repository;
 using DriftNews.Data;
 using Microsoft.EntityFrameworkCore;
+using DriftNews.Converters;
 
 namespace DriftNews.Controllers
 {
@@ -81,6 +82,10 @@ namespace DriftNews.Controllers
         public IActionResult RDS(int pg = 1)
         {
             List<News> news = _repository.GetNewsRDS();
+            foreach (News item in news)
+            {
+                item.Date.ToDateOnly();
+            }
             const int pageSize = 5;
             if (pg < 1)
             {
@@ -111,6 +116,10 @@ namespace DriftNews.Controllers
         public IActionResult FD(int pg = 1)
         {
             List<News> news = _repository.GetNewsFD();
+            foreach (News item in news)
+            {
+                item.Date.ToDateOnly();
+            }
             const int pageSize = 5;
             if (pg < 1)
             {

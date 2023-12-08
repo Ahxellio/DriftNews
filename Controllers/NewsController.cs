@@ -19,7 +19,7 @@ namespace DriftNews.Controllers
         }
         public IActionResult Index( int pg = 1)
         {
-            List<News> news = _db.News.OrderBy(d => d.Date).Reverse().ToList();
+            List<News> news = _repository.GetNews();
             const int pageSize = 5;
             if(pg < 1)
             {

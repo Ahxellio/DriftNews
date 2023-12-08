@@ -12,7 +12,10 @@ namespace DriftNews.Models
         public string Title { get; set; }
         [Required]
         public string Url { get; set; }
+
         [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd'/'MM'/'yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Date { get; set; }
         [Required]
         public string ImgUrl { get; set; }

@@ -1,4 +1,6 @@
-﻿using DriftNews.Data.Repository;
+﻿using DriftNews.Converters;
+using DriftNews.Data;
+using DriftNews.Data.Repository;
 using DriftNews.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -8,15 +10,17 @@ namespace DriftNews.Controllers
     public class HomeController : Controller
     {
         private readonly Repository _repository;
-        public HomeController(Repository repository)
+        private readonly ApplicationDbContext _db;
+        public HomeController(Repository repository, ApplicationDbContext db)
         {
             _repository = repository;
+            _db = db;
         }
 
         public IActionResult Index()
         {
-            var model = _repository.GetNewsFD();
-            return View(model);
+            var news = _repository.GetNewsFD();
+            return View(news);
         }
 
 

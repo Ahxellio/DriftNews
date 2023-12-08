@@ -25,7 +25,7 @@ namespace DriftNews.Data.Repository
         }
         public List<News> GetNews()
         {
-            return _context.News.OrderBy(d => d.Date).ToList();
+            return _context.News.OrderBy(d => d.Date).Reverse().ToList();
         }
         public List<DriversFDPRO> GetDriversFDPRO()
         {
